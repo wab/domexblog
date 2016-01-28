@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <title><?php wp_title('•'); ?></title>
-    <link rel="stylesheet" href="/wp-content/themes/journaldomexpo/style.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri (); ?>/style.css">
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700' rel='stylesheet' type='text/css'>
-	<link href="/favicon.png" rel="shortcut icon">
+	<link href="<?php bloginfo('url'); ?>/favicon.png" rel="shortcut icon">
 	<link rel="apple-touch-icon" href="touch-icon-iphone.png" />
 	<link rel="apple-touch-icon" sizes="72x72" href="touch-icon-ipad.png" />
 	<link rel="apple-touch-icon" sizes="114x114" href="touch-icon-iphone-retina.png" />
@@ -16,9 +16,9 @@
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 	<!--[if lte IE 8]>
-		<link rel="stylesheet" href="/wp-content/themes/journaldomexpo/css/ie8.css">
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri (); ?>/css/ie8.css">
 	<![endif]-->
-	<script src="/wp-content/themes/journaldomexpo/js/css_browser_selector.js"></script>
+	<script src="<?php echo get_template_directory_uri (); ?>/js/css_browser_selector.js"></script>
 	<script type="text/javascript">
 
 	  var _gaq = _gaq || [];
@@ -50,13 +50,13 @@
 		<?php if (is_home() && !is_paged()): ?>
 			<h1>Je fais construire</h1>
 		<?php else : ?>
-			<a href="/" class="logo">Je fais construire</a>
+			<a href="<?php bloginfo('url'); ?>" class="logo">Je fais construire</a>
 		<?php endif; ?>
 		<nav>
-			<a href="/construction" title=""<?php if (in_category('construction') && !is_front_page()) echo ' class="active"'; ?>>Construction</a>
-			<a href="/normes-eco-construction" title=""<?php if (in_category('normes-eco-construction') && !is_front_page()) echo ' class="active"'; ?>>Normes &amp; éco-construction</a>
-			<a href="/financement" title=""<?php if (in_category('financement') && !is_front_page()) echo ' class="active"'; ?>>Financement</a>
-			<a href="/garanties-ccmi" title="" class="last<?php if (in_category('garanties-ccmi') && !is_front_page()) echo ' active'; ?>">Garanties &amp; CCMI</a>
+			<a href="<?php bloginfo('url'); ?>/construction" title=""<?php if (in_category('construction') && !is_front_page()) echo ' class="active"'; ?>>Construction</a>
+			<a href="<?php bloginfo('url'); ?>/normes-eco-construction" title=""<?php if (in_category('normes-eco-construction') && !is_front_page()) echo ' class="active"'; ?>>Normes &amp; éco-construction</a>
+			<a href="<?php bloginfo('url'); ?>/financement" title=""<?php if (in_category('financement') && !is_front_page()) echo ' class="active"'; ?>>Financement</a>
+			<a href="<?php bloginfo('url'); ?>/garanties-ccmi" title="" class="last<?php if (in_category('garanties-ccmi') && !is_front_page()) echo ' active'; ?>">Garanties &amp; CCMI</a>
 		</nav>
 		<a href= "http://www.domexpo.fr" target="_blank" class="retour-domexpo">Un site parrainé par Domexpo</a>
 	</header>
